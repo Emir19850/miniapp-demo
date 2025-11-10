@@ -3,35 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Игра "Билеты и Кейсы"</title>
+  <title>Кейс-игра</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <!-- Главный экран игры -->
+    <!-- Игра -->
     <div id="gameTab" class="tab active">
-      <h1>🎟 Кейс-игра 🎟</h1>
-
-      <p>Выберите ставку:</p>
+      <h1>🎟 Кейсы</h1>
       <div class="gameOptions">
         <button class="gameOption" data-bet="1">1 TON</button>
         <button class="gameOption" data-bet="10">10 TON</button>
         <button class="gameOption" data-bet="100">100 TON</button>
       </div>
+      <input type="number" id="customBet" placeholder="Ставка TON">
+      <input type="text" id="playerName" placeholder="Ваш ник">
+      <button id="joinBtn">Встать в очередь</button>
 
-      <p>Или введи свою ставку:</p>
-      <input type="number" id="customBet" placeholder="Введите TON">
-
-      <input type="text" id="playerName" placeholder="Введите ваше имя">
-      <button id="buyTicketBtn">Присоединиться к очереди</button>
-
-      <div id="queueStatus">
-        <h2>Очередь (макс 10 игроков):</h2>
-        <ul id="queueList"></ul>
-      </div>
+      <ul id="queueList"></ul>
 
       <div id="result" style="display:none;">
-        <h2>Результат раунда:</h2>
         <p id="winnerText"></p>
         <button id="newGameBtn">Новая игра</button>
       </div>
@@ -46,7 +37,7 @@
 
     <!-- Рейтинг -->
     <div id="rankingTab" class="tab">
-      <h1>🏆 Рейтинг игроков</h1>
+      <h1>🏆 Рейтинг</h1>
       <ul id="rankingList"></ul>
     </div>
 
@@ -54,18 +45,17 @@
     <div id="walletTab" class="tab">
       <h1>💰 Кошелёк</h1>
       <p>Баланс: <span id="walletBalance">0 TON</span></p>
-      <input type="number" id="depositAmount" placeholder="Сумма для пополнения">
+      <input type="number" id="depositAmount" placeholder="Пополнить">
       <button id="depositBtn">Пополнить</button>
     </div>
 
     <!-- Настройки -->
     <div id="settingsTab" class="tab">
       <h1>⚙ Настройки</h1>
-      <p>Здесь можно добавить дополнительные настройки</p>
+      <p>Тёмная тема, компактный интерфейс</p>
     </div>
   </div>
 
-  <!-- Нижнее меню вкладок -->
   <div class="bottomNav">
     <button data-tab="gameTab">Игра</button>
     <button data-tab="profileTab">Профиль</button>
