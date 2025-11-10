@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра "Билеты в очередь"</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎟 Билеты в очередь 🎟</h1>
+    <p>Максимум 10 игроков. Стоимость билета: 1 TON</p>
+    
+    <input type="text" id="playerName" placeholder="Введите ваше имя">
+    <button id="buyTicketBtn">Купить билет</button>
+
+    <div id="queueStatus">
+      <h2>Очередь:</h2>
+      <ul id="queueList"></ul>
+    </div>
+
+    <div id="result" style="display:none;">
+      <h2>Результат раунда:</h2>
+      <p id="winnerText"></p>
+      <button id="newGameBtn">Новая игра</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
